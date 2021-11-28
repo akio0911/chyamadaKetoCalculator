@@ -8,8 +8,7 @@
 import UIKit
 
 final class InfomationViewController: UIViewController {
-    
-    private var lipidRequirement:Double?
+    private var lipidRequirement: Double?
 
     @IBOutlet private weak var exitButton: UIButton!
     @IBOutlet private weak var lipidRequirementView: UIView!
@@ -20,7 +19,7 @@ final class InfomationViewController: UIViewController {
         configure()
         display(lipidRequirement: lipidRequirement)
     }
-    
+
     private func configure() {
         [lipidRequirementView,
          exitButton].forEach {
@@ -28,20 +27,19 @@ final class InfomationViewController: UIViewController {
             $0?.layer.shadowOffset = CGSize(width: 0, height: 2)
             $0?.layer.shadowColor = UIColor.black.cgColor
             $0?.layer.shadowOpacity = 0.3
-        }
+         }
     }
-    
-    private func display(lipidRequirement:Double?) {
+
+    private func display(lipidRequirement: Double?) {
         guard let lipidRequirement = lipidRequirement else { return }
         if lipidRequirement < 100 {
-            lipidRequirementLabel.text = String(format:"%.f",lipidRequirement) + "g"
+            lipidRequirementLabel.text = String(format: "%.f", lipidRequirement) + "g"
         } else {
             lipidRequirementLabel.text = "100g以上"
         }
     }
-        
-    func lipidRequirement(completion: @escaping () -> Double?){
+
+    func lipidRequirement(completion: @escaping () -> Double?) {
         lipidRequirement = completion()
     }
-    
 }

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0218EB2172EEF8471B90A404 /* Pods_KetoCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD1D91F22491F1F84DF383 /* Pods_KetoCalculator.framework */; };
 		186A000027435E2600BD01DD /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AFFFF27435E2600BD01DD /* CalculationViewController.swift */; };
 		186A000A2743DD6E00BD01DD /* InfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A00092743DD6E00BD01DD /* InfomationViewController.swift */; };
+		3204C854744DA4EA5ED3F7F1 /* Pods_KetoCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389110192D4B9B9498BF5FAC /* Pods_KetoCalculator.framework */; };
 		8A0E2C682749431D002517BB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E2C672749431D002517BB /* SettingViewController.swift */; };
 		8A3DB002274C78C200A6C806 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DB001274C78C200A6C806 /* Extention.swift */; };
 		8A6BF47E272D80DE000C0E3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF47D272D80DE000C0E3C /* AppDelegate.swift */; };
@@ -21,10 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0BDD1D91F22491F1F84DF383 /* Pods_KetoCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KetoCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A00092743DD6E00BD01DD /* InfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewController.swift; sourceTree = "<group>"; };
 		186AFFFF27435E2600BD01DD /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
-		7B84D78C9B816DBFD87B650A /* Pods-KetoCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetoCalculator.release.xcconfig"; path = "Target Support Files/Pods-KetoCalculator/Pods-KetoCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		389110192D4B9B9498BF5FAC /* Pods_KetoCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KetoCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A7D689801A6A2F66990FB2 /* Pods-KetoCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetoCalculator.debug.xcconfig"; path = "Target Support Files/Pods-KetoCalculator/Pods-KetoCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		8A0E2C672749431D002517BB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8A3DB001274C78C200A6C806 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		8A6BF47A272D80DE000C0E3C /* KetoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KetoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +35,7 @@
 		8A6BF489272D80EB000C0E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A6BF48B272D80EB000C0E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A6BF494272D8644000C0E3C /* Nutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrient.swift; sourceTree = "<group>"; };
-		90FB4419F074A36AADA19C7A /* Pods-KetoCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetoCalculator.debug.xcconfig"; path = "Target Support Files/Pods-KetoCalculator/Pods-KetoCalculator.debug.xcconfig"; sourceTree = "<group>"; };
+		D0B4AD0AEEDC1143938EEE5B /* Pods-KetoCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetoCalculator.release.xcconfig"; path = "Target Support Files/Pods-KetoCalculator/Pods-KetoCalculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,21 +43,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0218EB2172EEF8471B90A404 /* Pods_KetoCalculator.framework in Frameworks */,
+				3204C854744DA4EA5ED3F7F1 /* Pods_KetoCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17CF734A8F53641252D00547 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0BDD1D91F22491F1F84DF383 /* Pods_KetoCalculator.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8A0E2C6D274A1636002517BB /* utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +71,7 @@
 				8A6BF47C272D80DE000C0E3C /* KetoCalculator */,
 				8A6BF47B272D80DE000C0E3C /* Products */,
 				F37A9080E288F12CA9AFC75F /* Pods */,
-				17CF734A8F53641252D00547 /* Frameworks */,
+				C2153B6BD87BB219B3F32943 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,11 +102,19 @@
 			path = KetoCalculator;
 			sourceTree = "<group>";
 		};
+		C2153B6BD87BB219B3F32943 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				389110192D4B9B9498BF5FAC /* Pods_KetoCalculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F37A9080E288F12CA9AFC75F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				90FB4419F074A36AADA19C7A /* Pods-KetoCalculator.debug.xcconfig */,
-				7B84D78C9B816DBFD87B650A /* Pods-KetoCalculator.release.xcconfig */,
+				56A7D689801A6A2F66990FB2 /* Pods-KetoCalculator.debug.xcconfig */,
+				D0B4AD0AEEDC1143938EEE5B /* Pods-KetoCalculator.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -126,11 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A6BF48E272D80EB000C0E3C /* Build configuration list for PBXNativeTarget "KetoCalculator" */;
 			buildPhases = (
-				2B90E34D9ED4FB75AA8AC084 /* [CP] Check Pods Manifest.lock */,
+				DC64C32C5A4A2EF3E3256DFC /* [CP] Check Pods Manifest.lock */,
 				8A6BF476272D80DE000C0E3C /* Sources */,
 				8A6BF477272D80DE000C0E3C /* Frameworks */,
 				8A6BF478272D80DE000C0E3C /* Resources */,
-				23252B389C8B61062DF8BBDC /* [CP] Embed Pods Frameworks */,
+				DC3EC4996FD98710D9180DA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,7 +187,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		23252B389C8B61062DF8BBDC /* [CP] Embed Pods Frameworks */ = {
+		DC3EC4996FD98710D9180DA4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,7 +204,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KetoCalculator/Pods-KetoCalculator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2B90E34D9ED4FB75AA8AC084 /* [CP] Check Pods Manifest.lock */ = {
+		DC64C32C5A4A2EF3E3256DFC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,7 +383,7 @@
 		};
 		8A6BF48F272D80EB000C0E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90FB4419F074A36AADA19C7A /* Pods-KetoCalculator.debug.xcconfig */;
+			baseConfigurationReference = 56A7D689801A6A2F66990FB2 /* Pods-KetoCalculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -402,7 +402,7 @@
 		};
 		8A6BF490272D80EB000C0E3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B84D78C9B816DBFD87B650A /* Pods-KetoCalculator.release.xcconfig */;
+			baseConfigurationReference = D0B4AD0AEEDC1143938EEE5B /* Pods-KetoCalculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -8,25 +8,24 @@
 import UIKit
 
 final class SettingViewController: UIViewController {
-
-    private var uiView:[UIView] {
+    private var uiView: [UIView] {
         [segmentedControlView,
          targetView,
          rssView]
     }
-    
+
     @IBOutlet private weak var segmentedControlView: UIView!
     @IBOutlet private weak var targetView: UIView!
     @IBOutlet private weak var rssView: UIView!
-    
+
     @IBOutlet private weak var ketoSegementedControl: UISegmentedControl!
     @IBOutlet private weak var targetTextField: UITextField!
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
-    
+
     private func configure() {
         uiView.forEach {
             $0.layer.cornerRadius = 10
