@@ -19,7 +19,7 @@ struct Nutrient {
         self.carbohydrate = carbohydrate
         self.sugar = nil
     }
-
+    
     init(protein:Double,fat:Double,sugar:Double) {
         self.protein = protein
         self.fat = fat
@@ -34,20 +34,20 @@ struct Nutrient {
         }
         return fat / (protein + carbohydrate)
     }
-    
+
     func ketoIndex() -> Double {  //ケトン指数の算出
         guard let carbohydrate = carbohydrate else {
             fatalError()
         }
-        
+
         return (0.9 * fat + 0.46 * protein) / (carbohydrate + 0.1 * fat + 0.58 * protein)
     }
-    
+
     func ketoNumber() -> Double {  //ケトン値の算出
         guard let sugar = sugar else {
             fatalError()
         }
-        
+
         return  (0.9 * fat + 0.46 * protein) / (sugar + 0.1 * fat + 0.58 * protein)
     }
     

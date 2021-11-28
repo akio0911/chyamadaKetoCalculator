@@ -2,17 +2,18 @@
 //  InfomationViewController.swift
 //  KetoCalculator
 //
-//  Created by 山田　天星 on 2021/11/16.
+//  Created by toaster on 2021/11/16.
 //
 
 import UIKit
 
 final class InfomationViewController: UIViewController {
-
-    @IBOutlet private weak var addFatAmountView: UIView!
-    @IBOutlet private weak var cancelButton: UIButton!
-    @IBOutlet private weak var lipidRequirementLabel: UILabel!
+    
     private var lipidRequirement:Double?
+
+    @IBOutlet private weak var exitButton: UIButton!
+    @IBOutlet private weak var lipidRequirementView: UIView!
+    @IBOutlet private weak var lipidRequirementLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,8 @@ final class InfomationViewController: UIViewController {
     }
     
     private func configure() {
-        [addFatAmountView,
-         cancelButton].forEach {
+        [lipidRequirementView,
+         exitButton].forEach {
             $0?.layer.cornerRadius = 10
             $0?.layer.shadowOffset = CGSize(width: 0, height: 2)
             $0?.layer.shadowColor = UIColor.black.cgColor
@@ -39,7 +40,7 @@ final class InfomationViewController: UIViewController {
         }
     }
         
-    func lipidRequirement(completion: @escaping () -> Double){
+    func lipidRequirement(completion: @escaping () -> Double?){
         lipidRequirement = completion()
     }
     

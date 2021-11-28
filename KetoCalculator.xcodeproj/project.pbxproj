@@ -8,26 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0218EB2172EEF8471B90A404 /* Pods_KetoCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDD1D91F22491F1F84DF383 /* Pods_KetoCalculator.framework */; };
-		186A000027435E2600BD01DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AFFFF27435E2600BD01DD /* ViewController.swift */; };
+		186A000027435E2600BD01DD /* CalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AFFFF27435E2600BD01DD /* CalculationViewController.swift */; };
 		186A000A2743DD6E00BD01DD /* InfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A00092743DD6E00BD01DD /* InfomationViewController.swift */; };
 		8A0E2C682749431D002517BB /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E2C672749431D002517BB /* SettingViewController.swift */; };
-		8A0E2C6B274A15FE002517BB /* SettingUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E2C6A274A15FD002517BB /* SettingUserDefaults.swift */; };
 		8A3DB002274C78C200A6C806 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3DB001274C78C200A6C806 /* Extention.swift */; };
 		8A6BF47E272D80DE000C0E3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF47D272D80DE000C0E3C /* AppDelegate.swift */; };
 		8A6BF480272D80DE000C0E3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF47F272D80DE000C0E3C /* SceneDelegate.swift */; };
 		8A6BF485272D80DE000C0E3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6BF483272D80DE000C0E3C /* Main.storyboard */; };
 		8A6BF487272D80EB000C0E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6BF486272D80EB000C0E3C /* Assets.xcassets */; };
 		8A6BF48A272D80EB000C0E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A6BF488272D80EB000C0E3C /* LaunchScreen.storyboard */; };
-		8A6BF495272D8644000C0E3C /* NutrientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF494272D8644000C0E3C /* NutrientModel.swift */; };
+		8A6BF495272D8644000C0E3C /* Nutrient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BF494272D8644000C0E3C /* Nutrient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BDD1D91F22491F1F84DF383 /* Pods_KetoCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KetoCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A00092743DD6E00BD01DD /* InfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewController.swift; sourceTree = "<group>"; };
-		186AFFFF27435E2600BD01DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		186AFFFF27435E2600BD01DD /* CalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationViewController.swift; sourceTree = "<group>"; };
 		7B84D78C9B816DBFD87B650A /* Pods-KetoCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetoCalculator.release.xcconfig"; path = "Target Support Files/Pods-KetoCalculator/Pods-KetoCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		8A0E2C672749431D002517BB /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		8A0E2C6A274A15FD002517BB /* SettingUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUserDefaults.swift; sourceTree = "<group>"; };
 		8A3DB001274C78C200A6C806 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		8A6BF47A272D80DE000C0E3C /* KetoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KetoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6BF47D272D80DE000C0E3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +34,7 @@
 		8A6BF486272D80EB000C0E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A6BF489272D80EB000C0E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A6BF48B272D80EB000C0E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A6BF494272D8644000C0E3C /* NutrientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientModel.swift; sourceTree = "<group>"; };
+		8A6BF494272D8644000C0E3C /* Nutrient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrient.swift; sourceTree = "<group>"; };
 		90FB4419F074A36AADA19C7A /* Pods-KetoCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KetoCalculator.debug.xcconfig"; path = "Target Support Files/Pods-KetoCalculator/Pods-KetoCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +61,6 @@
 		8A0E2C6D274A1636002517BB /* utility */ = {
 			isa = PBXGroup;
 			children = (
-				8A0E2C6A274A15FD002517BB /* SettingUserDefaults.swift */,
 			);
 			path = utility;
 			sourceTree = "<group>";
@@ -101,10 +98,10 @@
 				8A3DB000274C78AF00A6C806 /* Extention */,
 				8A6BF47D272D80DE000C0E3C /* AppDelegate.swift */,
 				8A6BF47F272D80DE000C0E3C /* SceneDelegate.swift */,
-				186AFFFF27435E2600BD01DD /* ViewController.swift */,
+				186AFFFF27435E2600BD01DD /* CalculationViewController.swift */,
 				186A00092743DD6E00BD01DD /* InfomationViewController.swift */,
-				8A6BF494272D8644000C0E3C /* NutrientModel.swift */,
 				8A0E2C672749431D002517BB /* SettingViewController.swift */,
+				8A6BF494272D8644000C0E3C /* Nutrient.swift */,
 				8A6BF483272D80DE000C0E3C /* Main.storyboard */,
 				8A6BF486272D80EB000C0E3C /* Assets.xcassets */,
 				8A6BF488272D80EB000C0E3C /* LaunchScreen.storyboard */,
@@ -236,13 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A0E2C6B274A15FE002517BB /* SettingUserDefaults.swift in Sources */,
 				186A000A2743DD6E00BD01DD /* InfomationViewController.swift in Sources */,
 				8A6BF47E272D80DE000C0E3C /* AppDelegate.swift in Sources */,
 				8A6BF480272D80DE000C0E3C /* SceneDelegate.swift in Sources */,
-				186A000027435E2600BD01DD /* ViewController.swift in Sources */,
+				186A000027435E2600BD01DD /* CalculationViewController.swift in Sources */,
 				8A3DB002274C78C200A6C806 /* Extention.swift in Sources */,
-				8A6BF495272D8644000C0E3C /* NutrientModel.swift in Sources */,
+				8A6BF495272D8644000C0E3C /* Nutrient.swift in Sources */,
 				8A0E2C682749431D002517BB /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

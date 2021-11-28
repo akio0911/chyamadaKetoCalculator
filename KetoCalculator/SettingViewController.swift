@@ -9,17 +9,19 @@ import UIKit
 
 final class SettingViewController: UIViewController {
 
+    private var uiView:[UIView] {
+        [segmentedControlView,
+         targetView,
+         rssView]
+    }
+    
     @IBOutlet private weak var segmentedControlView: UIView!
     @IBOutlet private weak var targetView: UIView!
     @IBOutlet private weak var rssView: UIView!
     
-    @IBOutlet private weak var ketoExpressionSegementedControl: UISegmentedControl!
+    @IBOutlet private weak var ketoSegementedControl: UISegmentedControl!
     @IBOutlet private weak var targetTextField: UITextField!
         
-    private var uiView:[UIView] {
-        [segmentedControlView,targetView,rssView]
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
