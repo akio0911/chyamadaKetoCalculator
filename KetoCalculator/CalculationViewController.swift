@@ -189,13 +189,13 @@ final class CalculationViewController: UIViewController {
         switch ketoSegmentedControl.selectedSegmentIndex {
         case 0:
             guard let carbohydrate = carbohydrate else { return }
-            calculatedResult = Nutrient(protein: protein, fat: fat, carbohydrate: carbohydrate).ketoRatio()
+            calculatedResult = PFC(protein: protein, fat: fat, carbohydrate: carbohydrate).ketoRatio
         case 1:
             guard let carbohydrate = carbohydrate else { return }
-            calculatedResult = Nutrient(protein: protein, fat: fat, carbohydrate: carbohydrate).ketoIndex()
+            calculatedResult = PFC(protein: protein, fat: fat, carbohydrate: carbohydrate).ketoIndex
         case 2:
             guard let sugar = sugar else { return }
-            calculatedResult = Nutrient(protein: protein, fat: fat, sugar: sugar).ketoNumber()
+            calculatedResult = PFS(protein: protein, fat: fat, sugar: sugar).ketoNumber
         default:
             break
         }
