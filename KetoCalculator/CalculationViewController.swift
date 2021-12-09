@@ -277,45 +277,27 @@ extension CalculationViewController {
     }
 
     private func isValid() -> Bool {
-        let isValid: Bool
+        let targetTextFields: [UITextField]
 
         switch selectedIndexType {
         case .ketoRatio, .ketoIndex:
-            isValid = [inputProteinTextField.text,
-                       inputFatTextField.text,
-                       inputCarbohydrateTextField.text]
-                .compactMap { $0 }
-                .allSatisfy {
-                    _ = !$0
-                        .trimmingCharacters(in: .whitespacesAndNewlines)
-                        .isEmpty
-
-                    if Double($0) == nil {
-                        return false
-                    } else {
-                        return true
-                    }
-                }
-
-            return isValid
+            targetTextFields = [
+                inputProteinTextField,
+                inputFatTextField,
+                inputCarbohydrateTextField
+            ]
         case .ketoNumber:
-            isValid = [inputProteinTextField.text,
-                       inputFatTextField.text,
-                       inputSugarTextField.text]
-                .compactMap { $0 }
-                .allSatisfy {
-                    _ = !$0
-                        .trimmingCharacters(in: .whitespacesAndNewlines)
-                        .isEmpty
-
-                    if Double($0) == nil {
-                        return false
-                    } else {
-                        return true
-                    }
-                }
-
-            return isValid
+            targetTextFields = [
+                inputProteinTextField,
+                inputFatTextField,
+                inputSugarTextField
+            ]
         }
+
+        return targetTextFields
+            .map { $0.text ?? "" }
+            .allSatisfy {
+                Double($0) != nil
+            }
     }
 }
