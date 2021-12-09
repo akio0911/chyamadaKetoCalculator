@@ -8,6 +8,12 @@
 import UIKit
 
 final class CalculationViewController: UIViewController {
+    private enum IndexType {
+        case ketoRatio
+        case ketoIndex
+        case ketoNumber
+    }
+
     private var defaultTarget: Double = 3.0  // 暫定的な設定
     private var calculatedResult: Double?
     private var protein: Double?
@@ -114,6 +120,8 @@ final class CalculationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let infomationVC = segue.destination as? InfomationViewController else { return }
         infomationVC.lipidRequirement(completion: { [weak self] () -> Double? in
+            guard let strongSelf = self else { return }
+
             let lipidRequirement: Double?
 
             guard let defaultTarget = self?.defaultTarget,
@@ -124,15 +132,15 @@ final class CalculationViewController: UIViewController {
                 return lipidRequirement
             }
 
-            switch self?.ketoSegmentedControl.selectedSegmentIndex {
-            case 0:
+            switch strongSelf.selectedIndexType {
+            case .ketoRatio:
                 guard let carbohydrate = self?.carbohydrate else {
                     lipidRequirement = nil
                     return lipidRequirement
                 }
                 lipidRequirement = (defaultTarget - calculatedResult) * (protein + carbohydrate) - fat
 
-            case 1:
+            case .ketoIndex:
                 guard let carbohydrate = self?.carbohydrate else {
                     lipidRequirement = nil
                     return lipidRequirement
@@ -140,17 +148,13 @@ final class CalculationViewController: UIViewController {
                 lipidRequirement =
                     (0.46 * protein - defaultTarget * (carbohydrate + 0.58 * protein)) / ( 0.1 * defaultTarget - 0.9) - fat
 
-            case 2:
+            case .ketoNumber:
                 guard let sugar = self?.sugar else {
                     lipidRequirement = nil
                     return lipidRequirement
                 }
                 lipidRequirement =
                     (0.46 * protein - defaultTarget * (sugar + 0.58 * protein)) / ( 0.1 * defaultTarget - 0.9) - fat
-
-            default:
-                lipidRequirement = nil
-                return lipidRequirement
             }
 
             return lipidRequirement
@@ -186,18 +190,16 @@ final class CalculationViewController: UIViewController {
             return
         }
 
-        switch ketoSegmentedControl.selectedSegmentIndex {
-        case 0:
+        switch selectedIndexType {
+        case .ketoRatio:
             guard let carbohydrate = carbohydrate else { return }
             calculatedResult = PFC(protein: protein, fat: fat, carbohydrate: carbohydrate).ketoRatio
-        case 1:
+        case .ketoIndex:
             guard let carbohydrate = carbohydrate else { return }
             calculatedResult = PFC(protein: protein, fat: fat, carbohydrate: carbohydrate).ketoIndex
-        case 2:
+        case .ketoNumber:
             guard let sugar = sugar else { return }
             calculatedResult = PFS(protein: protein, fat: fat, sugar: sugar).ketoNumber
-        default:
-            break
         }
 
         guard let calculatedResult = calculatedResult else {
@@ -207,6 +209,19 @@ final class CalculationViewController: UIViewController {
 
         calculatedResultLabel.text = String(round(calculatedResult * 10) / 10)
         enableInfomationButton()
+    }
+
+    private var selectedIndexType: IndexType {
+        switch ketoSegmentedControl.selectedSegmentIndex {
+        case 0:
+            return .ketoRatio
+        case 1:
+            return .ketoIndex
+        case 2:
+            return .ketoNumber
+        default:
+            fatalError()
+        }
     }
 }
 
@@ -237,8 +252,8 @@ extension CalculationViewController {
     }
 
     private func enableTextField() {
-        if ketoSegmentedControl.selectedSegmentIndex == 0 ||
-            ketoSegmentedControl.selectedSegmentIndex == 1 {
+        switch selectedIndexType {
+        case .ketoRatio, .ketoIndex:
             inputCarbohydrateTextField.map {
                 $0.isEnabled = true
                 $0.layer.opacity = 1
@@ -248,7 +263,7 @@ extension CalculationViewController {
                 $0.isEnabled = false
                 $0.layer.opacity = 0.5
             }
-        } else if ketoSegmentedControl.selectedSegmentIndex == 2 {
+        case .ketoNumber:
             inputCarbohydrateTextField.map {
                 $0.isEnabled = false
                 $0.layer.opacity = 0.5
@@ -264,8 +279,8 @@ extension CalculationViewController {
     private func isValid() -> Bool {
         let isValid: Bool
 
-        if ketoSegmentedControl.selectedSegmentIndex == 0 ||
-            ketoSegmentedControl.selectedSegmentIndex == 1 {
+        switch selectedIndexType {
+        case .ketoRatio, .ketoIndex:
             isValid = [inputProteinTextField.text,
                        inputFatTextField.text,
                        inputCarbohydrateTextField.text]
@@ -283,7 +298,7 @@ extension CalculationViewController {
                 }
 
             return isValid
-        } else if ketoSegmentedControl.selectedSegmentIndex == 2 {
+        case .ketoNumber:
             isValid = [inputProteinTextField.text,
                        inputFatTextField.text,
                        inputSugarTextField.text]
@@ -300,9 +315,6 @@ extension CalculationViewController {
                     }
                 }
 
-            return isValid
-        } else {
-            isValid = false
             return isValid
         }
     }
