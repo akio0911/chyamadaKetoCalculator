@@ -120,7 +120,7 @@ final class CalculationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let infomationVC = segue.destination as? InfomationViewController else { return }
         infomationVC.lipidRequirement(completion: { [weak self] () -> Double? in
-            guard let strongSelf = self else { return }
+            guard let strongSelf = self else { return nil }
 
             let lipidRequirement: Double?
 
